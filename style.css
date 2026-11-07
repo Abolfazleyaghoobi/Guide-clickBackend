@@ -1,0 +1,612 @@
+/* =========================
+   GENERAL
+========================= */
+@font-face {
+    font-family: "sansir";
+    src: url("./Sans.ttf") format("truetype");
+}
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "sansir", Arial, sans-serif;
+    background: #0b1120;
+    color: #e2e8f0;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   LAYOUT
+========================= */
+
+.docs-layout {
+    display: flex;
+    direction: rtl;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    width: 270px;
+    min-width: 270px;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #111827;
+    border-left: 1px solid #263247;
+
+    padding: 22px 16px;
+}
+
+
+/* SIDEBAR HEADER */
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding-bottom: 22px;
+    border-bottom: 1px solid #263247;
+}
+
+.logo {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+
+    border-radius: 10px;
+
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.sidebar-brand h2 {
+    font-size: 14px;
+    color: #f8fafc;
+}
+
+.sidebar-brand span {
+    font-size: 10px;
+    color: #64748b;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.sidebar-search {
+    margin: 22px 0;
+}
+
+.sidebar-search input {
+    width: 100%;
+    padding: 11px 12px;
+
+    background: #0b1120;
+
+    border: 1px solid #263247;
+    border-radius: 8px;
+
+    outline: none;
+
+    color: #e2e8f0;
+    font-family: inherit;
+    font-size: 12px;
+
+    transition: 0.2s;
+}
+
+.sidebar-search input::placeholder {
+    color: #64748b;
+}
+
+.sidebar-search input:focus {
+    border-color: #6366f1;
+}
+
+
+/* =========================
+   SIDEBAR MENU
+========================= */
+
+.sidebar-menu {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.menu-group {
+    margin-bottom: 28px;
+}
+
+.menu-title {
+    display: block;
+
+    color: #64748b;
+    font-size: 11px;
+    font-weight: bold;
+
+    margin-bottom: 12px;
+    padding-right: 10px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 11px 12px;
+    margin-bottom: 5px;
+
+    color: #94a3b8;
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+
+    transition: all 0.2s ease;
+}
+
+.menu-item:hover {
+    background: #1e293b;
+    color: #e2e8f0;
+}
+
+.menu-item.active {
+    background: #292044;
+    color: #c4b5fd;
+
+    border-right: 3px solid #8b5cf6;
+}
+
+
+/* MENU ICON */
+
+.menu-icon {
+    font-size: 17px;
+    width: 20px;
+    text-align: center;
+}
+
+
+/* =========================
+   MENU METHOD BADGES
+========================= */
+
+.menu-method {
+    margin-right: auto;
+
+    font-size: 9px;
+    font-weight: bold;
+
+    padding: 3px 6px;
+    border-radius: 4px;
+
+    direction: ltr;
+}
+
+.menu-method.get {
+    background: #064e3b;
+    color: #6ee7b7;
+}
+
+.menu-method.post {
+    background: #1e3a8a;
+    color: #93c5fd;
+}
+
+.menu-method.put {
+    background: #713f12;
+    color: #fcd34d;
+}
+
+.menu-method.delete {
+    background: #7f1d1d;
+    color: #fca5a5;
+}
+
+
+/* =========================
+   SIDEBAR FOOTER
+========================= */
+
+.sidebar-footer {
+    padding-top: 18px;
+    border-top: 1px solid #263247;
+
+    color: #64748b;
+    font-size: 11px;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+
+    background: #22c55e;
+    border-radius: 50%;
+
+    box-shadow: 0 0 8px #22c55e;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+
+    padding: 40px 30px;
+}
+
+.documentation-container {
+    max-width: 950px;
+    margin: 0 auto;
+
+    background: #111827;
+
+    padding: 35px;
+
+    border-radius: 14px;
+
+    border: 1px solid #263247;
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================
+   API HEADER
+========================= */
+
+.api-header {
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+
+    border-bottom: 1px solid #263247;
+}
+
+.api-label {
+    display: inline-block;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    color: #a78bfa;
+    background: #292044;
+
+    padding: 5px 12px;
+
+    border-radius: 5px;
+    margin-bottom: 12px;
+
+    direction: ltr;
+}
+
+.api-title h1 {
+    font-size: 25px;
+    font-weight: 700;
+
+    color: #f8fafc;
+
+    margin-bottom: 10px;
+}
+
+.api-title p {
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+
+/* =========================
+   API SECTIONS
+========================= */
+
+.api-section {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: 700;
+
+    color: #e2e8f0;
+
+    margin-bottom: 15px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+.section-header .section-title {
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   API URL
+========================= */
+
+.api-url-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    background: #0b1220;
+
+    border: 1px solid #263247;
+    border-radius: 9px;
+
+    padding: 15px;
+
+    direction: ltr;
+    overflow: hidden;
+
+    transition: 0.2s;
+}
+
+.api-url-box:hover {
+    border-color: #6366f1;
+}
+
+.method {
+    padding: 5px 12px;
+
+    border-radius: 5px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    flex-shrink: 0;
+}
+
+.method.get {
+    background: #064e3b;
+    color: #6ee7b7;
+}
+
+.method.post {
+    background: #1e3a8a;
+    color: #93c5fd;
+}
+
+.method.put {
+    background: #713f12;
+    color: #fcd34d;
+}
+
+.method.delete {
+    background: #7f1d1d;
+    color: #fca5a5;
+}
+
+.api-link {
+    color: #a78bfa;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    direction: ltr;
+    text-align: left;
+
+    overflow-wrap: anywhere;
+
+    transition: 0.2s;
+}
+
+.api-link:hover {
+    color: #c4b5fd;
+    text-decoration: underline;
+}
+
+
+/* =========================
+   CODE BADGES
+========================= */
+
+.code-type {
+    font-size: 11px;
+    font-weight: bold;
+
+    background: #292044;
+    color: #c4b5fd;
+
+    padding: 4px 10px;
+
+    border-radius: 5px;
+
+    direction: ltr;
+}
+
+.code-type.success {
+    background: #064e3b;
+    color: #6ee7b7;
+}
+
+
+/* =========================
+   CODE CONTAINER
+========================= */
+
+.code-container {
+    direction: ltr;
+    text-align: left;
+
+    background: #0b1120;
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    border: 1px solid #263247;
+}
+
+.code-container pre {
+    margin: 0;
+
+    padding: 22px;
+
+    overflow-x: auto;
+
+    direction: ltr;
+    text-align: left;
+}
+
+.code-container code {
+    font-family: Consolas, Monaco, monospace;
+
+    font-size: 13px;
+    line-height: 1.9;
+
+    white-space: pre;
+    background: transparent;
+}
+
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+.sidebar-menu::-webkit-scrollbar,
+.code-container pre::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+.sidebar-menu::-webkit-scrollbar-thumb,
+.code-container pre::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 10px;
+}
+
+.sidebar-menu::-webkit-scrollbar-track,
+.code-container pre::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .docs-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: 100%;
+
+        height: auto;
+        position: relative;
+
+        padding: 15px;
+    }
+
+    .sidebar-search,
+    .sidebar-footer {
+        display: none;
+    }
+
+    .sidebar-header {
+        padding-bottom: 15px;
+    }
+
+    .sidebar-menu {
+        display: flex;
+        gap: 20px;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        padding-top: 15px;
+    }
+
+    .menu-group {
+        flex-shrink: 0;
+        margin-bottom: 5px;
+    }
+
+    .menu-title {
+        font-size: 10px;
+    }
+
+    .menu-item {
+        white-space: nowrap;
+        padding: 9px 10px;
+    }
+
+    .main-content {
+        padding: 20px 12px;
+    }
+
+    .documentation-container {
+        padding: 22px 16px;
+    }
+
+    .api-title h1 {
+        font-size: 20px;
+    }
+
+    .api-url-box {
+        flex-wrap: wrap;
+    }
+
+    .api-link {
+        font-size: 12px;
+        max-width: 100%;
+    }
+
+    .code-container pre {
+        padding: 15px;
+    }
+
+    .code-container code {
+        font-size: 12px;
+    }
+
+}
