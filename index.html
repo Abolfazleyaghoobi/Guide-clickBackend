@@ -41,6 +41,11 @@
             پروفایل
 
             <span class="menu-method get">GET</span>
+          </a>  <a href="#profileUsername" class="menu-item active">
+            <span class="menu-icon">＋</span>
+            پروفایل کاربر
+
+            <span class="menu-method get">GET</span>
           </a>
              <a href="#updataProfile" class="menu-item active">
             <span class="menu-icon">＋</span>
@@ -257,6 +262,86 @@
   در بدنه درخواست باید این  
      credentials: "include",
      باشه
+  
+
+}</code></pre>
+            </div>
+          </section>
+
+          <!-- RESPONSE BODY -->
+          <section class="api-section">
+            <div class="section-header">
+              <h2 class="section-title">بدنه پاسخ (Response Body)</h2>
+
+              <span class="code-type success">200 OK</span>
+            </div>
+
+            <div class="code-container">
+              <pre><code class="language-json">{
+  "success": true,
+  "message": "Get info user successfully",
+  "data": {
+    "id": "22",
+    "username": "Aba12zle",
+    "phone": "09317891296",
+    "status": "active",
+    "level": 1,
+    "xp": 0,
+    "xp_to_next_level": 1000,
+    "step_balance": 0,
+    "profile": {
+      "display_name": "Aba12zle",
+      "bio": null,
+      "avatar_url": null,
+      "banner_url": null
+    }
+  }
+}</code></pre>
+            </div>
+          </section>
+        </div>
+        <!-- profile username -->
+        <div class="documentation-container" id="profileUsername">
+          <!-- API HEADER -->
+          <header class="api-header">
+            <div class="api-title">
+              <span class="api-label"> AUTHENTICATION / LOGIN </span>
+
+              <h1>پروفایل کاربر</h1>
+
+              <p>برای دریافت اطلاعات پروفایل کاربر با نام کاربر به این روت درخواست بزن</p>
+            </div>
+          </header>
+
+          <!-- API URL -->
+          <section class="api-section">
+            <h2 class="section-title">آدرس API</h2>
+
+            <div class="api-url-box">
+              <span class="method get">GET</span>
+
+              <a
+                href="٫"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="api-link"
+              >
+                api/profile/:username
+              </a>
+            </div>
+          </section>
+
+          <!-- REQUEST BODY -->
+          <section class="api-section">
+            <div class="section-header">
+              <h2 class="section-title">بدنه درخواست (Request Body)</h2>
+
+              <span class="code-type">JSON</span>
+            </div>
+
+            <div class="code-container">
+              <pre><code class="language-json">{
+ 
   
 
 }</code></pre>
