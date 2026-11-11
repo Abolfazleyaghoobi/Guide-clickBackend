@@ -41,21 +41,34 @@
             پروفایل
 
             <span class="menu-method get">GET</span>
-          </a>  <a href="#profileUsername" class="menu-item active">
+          </a>
+          <a href="#profileUsername" class="menu-item active">
             <span class="menu-icon">＋</span>
             پروفایل کاربر
 
             <span class="menu-method get">GET</span>
           </a>
-             <a href="#updataProfile" class="menu-item active">
+          <a href="#updateProfile" class="menu-item active">
             <span class="menu-icon">＋</span>
-          اپدیت پروفایل
+            اپدیت پروفایل
 
             <span class="menu-method put">PATCH</span>
           </a>
-               <a href="#updataAccount" class="menu-item active">
+          <a href="#updateAccount" class="menu-item active">
             <span class="menu-icon">＋</span>
-          اپدیت اکانت 
+            اپدیت اکانت
+
+            <span class="menu-method put">PUTCH</span>
+          </a>
+           <a href="#achivement" class="menu-item active">
+            <span class="menu-icon">＋</span>
+           ایجاد کردن اچیومنت
+
+            <span class="menu-method post">POST</span>
+          </a>
+              <a href="#achivementUpdate" class="menu-item active">
+            <span class="menu-icon">＋</span>
+           اپدیت کردن اچیومنت
 
             <span class="menu-method put">PUTCH</span>
           </a>
@@ -324,7 +337,10 @@
 
               <h1>پروفایل کاربر</h1>
 
-              <p>برای دریافت اطلاعات پروفایل کاربر با نام کاربر به این روت درخواست بزن</p>
+              <p>
+                برای دریافت اطلاعات پروفایل کاربر با نام کاربر به این روت
+                درخواست بزن
+              </p>
             </div>
           </header>
 
@@ -388,6 +404,8 @@
       "display_name": "Aba12zle",
       "bio": null,
       "avatar_url": null,
+      "github_url": null,
+      "portolio_url": null,
       "banner_url": null
     }
   }
@@ -396,7 +414,7 @@
           </section>
         </div>
         <!-- update profile -->
-        <div class="documentation-container" id="updataProfile">
+        <div class="documentation-container" id="updateProfile">
           <!-- API HEADER -->
           <header class="api-header">
             <div class="api-title">
@@ -421,7 +439,7 @@
                 rel="noopener noreferrer"
                 class="api-link"
               >
-                api/profile/updata
+                api/profile/update
               </a>
             </div>
           </section>
@@ -429,7 +447,10 @@
           <!-- REQUEST BODY -->
           <section class="api-section">
             <div class="section-header">
-              <h2 class="section-title">بدنه درخواست (Request Body) باید از نوع (multipart/form-data)باشه   </h2>
+              <h2 class="section-title">
+                بدنه درخواست (Request Body) باید از نوع
+                (multipart/form-data)باشه
+              </h2>
 
               <span class="code-type">JSON</span>
             </div>
@@ -470,6 +491,9 @@
     "bio": "laskjdflkajsldkfjlaksdjflkajsdklflasdflkjasldjfl",
     "avatar_url": null,
     "banner_url": null,
+    "github_url": null,
+                 "portolio_url": null,
+
     "created_at": "2026-11-08T19:24:38.445Z",
     "updated_at": "2026-11-08T20:30:03.000Z"
   }
@@ -478,7 +502,7 @@
           </section>
         </div>
         <!-- update account -->
-        <div class="documentation-container" id="updataAccount">
+        <div class="documentation-container" id="updateAccount">
           <!-- API HEADER -->
           <header class="api-header">
             <div class="api-title">
@@ -486,7 +510,10 @@
 
               <h1>اپدیت اکانت</h1>
 
-              <p>برای اپدیت کردن اکانت کاربر مثل شماره تماس یا نام کاربری به این روت درخواست بزن </p>
+              <p>
+                برای اپدیت کردن اکانت کاربر مثل شماره تماس یا نام کاربری به این
+                روت درخواست بزن
+              </p>
             </div>
           </header>
 
@@ -503,7 +530,7 @@
                 rel="noopener noreferrer"
                 class="api-link"
               >
-                api/profile/updataAccount
+                api/profile/updateAccount
               </a>
             </div>
           </section>
@@ -542,6 +569,169 @@
   "success": true,
   "message": "Account updated successfully",
   
+}</code></pre>
+            </div>
+          </section>
+        </div>
+           <!-- create achivement -->
+        <div class="documentation-container" id="achivement">
+          <!-- API HEADER -->
+          <header class="api-header">
+            <div class="api-title">
+              <span class="api-label"> AUTHENTICATION / ACHIVEMENT </span>
+
+              <h1>ایجاد اچیومنت</h1>
+
+              <p>
+                برای ایجاد اچیومنت جدید به این روت درخواست بزن
+              </p>
+            </div>
+          </header>
+
+          <!-- API URL -->
+          <section class="api-section">
+            <h2 class="section-title">آدرس API</h2>
+
+            <div class="api-url-box">
+              <span class="method post">POST</span>
+
+              <a
+                href="٫"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="api-link"
+              >
+                api/achievement/create
+              </a>
+            </div>
+          </section>
+
+          <!-- REQUEST BODY -->
+          <section class="api-section">
+            <div class="section-header">
+              <h2 class="section-title">بدنه درخواست (Request Body)</h2>
+
+              <span class="code-type">JSON</span>
+            </div>
+
+            <div class="code-container">
+              <pre><code class="language-json">{
+  "key": "second_article",
+  "title": "دومین مقاله",
+  "description": "دومین مقاله خودت را منتشر کردی.",
+  "iconKey": "trophy",
+  "conditionType": "publish_article",
+  "conditionValue": 2,
+  "isActive": true
+}</code></pre>
+            </div>
+          </section>
+
+          <!-- RESPONSE BODY -->
+          <section class="api-section">
+            <div class="section-header">
+              <h2 class="section-title">بدنه پاسخ (Response Body)</h2>
+
+              <span class="code-type success">201 Created</span>
+            </div>
+
+            <div class="code-container">
+              <pre><code class="language-json">{
+  "status": "success",
+  "data": {
+    "id": "6",
+    "key": "second22_article",
+    "title": "ww مقاله",
+    "description": "دومین مقاله خودت را منتشر کردی.",
+    "iconKey": "trophy",
+    "conditionType": "publish_article",
+    "conditionValue": 2,
+    "isActive": true,
+    "createdAt": "2026-11-11T17:40:20.380Z"
+  }
+}</code></pre>
+            </div>
+          </section>
+        </div>
+
+            <!-- update achivement -->
+        <div class="documentation-container" id="achivementUpdate">
+          <!-- API HEADER -->
+          <header class="api-header">
+            <div class="api-title">
+              <span class="api-label"> AUTHENTICATION / ACHIVEMENT </span>
+
+              <h1>اپدیت اچیومنت</h1>
+
+              <p>
+                برای اپدیت اچیومنت  به این روت درخواست بزن
+              </p>
+            </div>
+          </header>
+
+          <!-- API URL -->
+          <section class="api-section">
+            <h2 class="section-title">آدرس API</h2>
+
+            <div class="api-url-box">
+              <span class="method put">PUTCH</span>
+
+              <a
+                href="٫"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="api-link"
+              >
+                api/achievement/update/:id
+              </a>
+            </div>
+          </section>
+
+          <!-- REQUEST BODY -->
+          <section class="api-section">
+            <div class="section-header">
+              <h2 class="section-title">بدنه درخواست (Request Body)</h2>
+
+              <span class="code-type">JSON</span>
+            </div>
+
+            <div class="code-container">
+              <pre><code class="language-json">{
+فرقی نمیکنه که کدوم مقدار رو تغییر بدی، اپدیت میشه. اما باید یکی از فیلد ها باشه
+
+  "key": "second_article",
+  "title": "دومین مقاله",
+  "description": "دومین مقاله خودت را منتشر کردی.",
+  "iconKey": "trophy",
+  "conditionType": "publish_article",
+  "conditionValue": 2,
+  "isActive": true
+}</code></pre>
+            </div>
+          </section>
+
+          <!-- RESPONSE BODY -->
+          <section class="api-section">
+            <div class="section-header">
+              <h2 class="section-title">بدنه پاسخ (Response Body)</h2>
+
+              <span class="code-type success">201 Created</span>
+            </div>
+
+            <div class="code-container">
+              <pre><code class="language-json">{
+  "status": "success",
+  "data": {
+    "id": "6",
+    "key": "second22_article",
+    "title": "ww مقاله",
+    "description": "دومین مقاله خودت را منتشر کردی.",
+    "iconKey": "trophy",
+    "conditionType": "publish_article",
+    "conditionValue": 2,
+    "isActive": true,
+    "createdAt": "2026-11-11T17:40:20.380Z"
+  }
 }</code></pre>
             </div>
           </section>
