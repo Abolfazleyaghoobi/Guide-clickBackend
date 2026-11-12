@@ -72,6 +72,25 @@
 
             <span class="menu-method put">PUTCH</span>
           </a>
+             </a>
+              <a href="#createProject" class="menu-item active">
+            <span class="menu-icon">＋</span>
+            ایجاد کردن پروژه
+
+            <span class="menu-method post">POST</span>
+          </a>
+             <a href="#updateProject" class="menu-item active">
+            <span class="menu-icon">＋</span>
+            اپدیت  کردن پروژه
+
+            <span class="menu-method put">PATCH</span>
+          </a>
+               <a href="#deleteProject" class="menu-item active">
+            <span class="menu-icon">＋</span>
+            حذف  کردن پروژه
+
+            <span class="menu-method delete">DELETE</span>
+          </a>
         </nav>
       </aside>
 
@@ -653,7 +672,6 @@
             </div>
           </section>
         </div>
-
             <!-- update achivement -->
         <div class="documentation-container" id="achivementUpdate">
           <!-- API HEADER -->
@@ -736,6 +754,223 @@
             </div>
           </section>
         </div>
+             <!-- create project -->
+        <div class="documentation-container" id="createProject">
+          <!-- API HEADER -->
+          <header class="api-header">
+            <div class="api-title">
+              <span class="api-label"> AUTHENTICATION / PROJECT </span>
+
+              <h1>create prject</h1>
+
+              <p>
+               برای ایجاد کردن پروژه جدید به این روت درخواست بزن
+              </p>
+            </div>
+          </header>
+
+          <!-- API URL -->
+          <section class="api-section">
+            <h2 class="section-title">آدرس API</h2>
+
+            <div class="api-url-box">
+              <span class="method post">post</span>
+
+              <a
+                href="٫"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="api-link"
+              >
+                api/profile/project
+              </a>
+            </div>
+          </section>
+
+          <!-- REQUEST BODY -->
+          <section class="api-section">
+            <div class="section-header">
+              <h2 class="section-title">بدنه درخواست (Request Body)</h2>
+
+              <span class="code-type">JSON</span>
+            </div>
+
+            <div class="code-container">
+              <pre><code class="language-json">{
+  "title": "My Portfolio Website",
+  "description": "A personal portfolio website built with React and TypeScript.",
+  "project_url": "https://example.com"
+}</code></pre>
+            </div>
+          </section>
+
+          <!-- RESPONSE BODY -->
+          <section class="api-section">
+            <div class="section-header">
+              <h2 class="section-title">بدنه پاسخ (Response Body)</h2>
+
+              <span class="code-type success">201 Created</span>
+            </div>
+
+            <div class="code-container">
+              <pre><code class="language-json">{
+  "success": true,
+  "message": "Project created successfully",
+  "data": {
+    "id": 3,
+    "title": "My Portfolio Website",
+    "description": "A personal portfolio website built with React and TypeScript.",
+    "project_url": "https://example.com"
+  }
+}</code></pre>
+            </div>
+          </section>
+        </div>
+                <!-- update project -->
+        <div class="documentation-container" id="updateProject">
+          <!-- API HEADER -->
+          <header class="api-header">
+            <div class="api-title">
+              <span class="api-label"> AUTHENTICATION / PROJECT </span>
+
+              <h1>update prject</h1>
+
+              <p>
+               برای اپدیت  کردن پروژه  به این روت درخواست بزن
+              </p>
+            </div>
+          </header>
+
+          <!-- API URL -->
+          <section class="api-section">
+            <h2 class="section-title">آدرس API</h2>
+
+            <div class="api-url-box">
+              <span class="method put">patch</span>
+
+              <a
+                href="٫"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="api-link"
+              >
+                api/profile/project/:id
+              </a>
+            </div>
+          </section>
+
+          <!-- REQUEST BODY -->
+          <section class="api-section">
+            <div class="section-header">
+              <h2 class="section-title">بدنه درخواست (Request Body)</h2>
+
+              <span class="code-type">JSON</span>
+            </div>
+
+            <div class="code-container">
+              <pre><code class="language-json">{
+                ببین این ایدی اجباریه باید باشه 
+
+
+                "id":{id of project},
+  "title": "My Portfolio Website",
+  "description": "A personal portfolio website built with React and TypeScript.",
+  "project_url": "https://example.com"
+}</code></pre>
+            </div>
+          </section>
+
+          <!-- RESPONSE BODY -->
+          <section class="api-section">
+            <div class="section-header">
+              <h2 class="section-title">بدنه پاسخ (Response Body)</h2>
+
+              <span class="code-type success">200 OK</span>
+            </div>
+
+            <div class="code-container">
+              <pre><code class="language-json">{
+  "success": true,
+  "message": "Project updated successfully",
+  "data": {
+    "id": 3,
+    "user_id": "42",
+    "title": "My Portfo۹۹۹۹۹lio Website",
+    "description": "A personal portfolio website built with React and TypeScript.",
+    "project_url": "https://example.com",
+    "created_at": "2026-11-12T14:11:07.248Z",
+    "updated_at": "2026-11-12T14:15:04.000Z"
+  }
+}</code></pre>
+            </div>
+          </section>
+        </div>
+
+                 <!-- delete project -->
+        <div class="documentation-container" id="deleteProject">
+          <!-- API HEADER -->
+          <header class="api-header">
+            <div class="api-title">
+              <span class="api-label"> AUTHENTICATION / PROJECT </span>
+
+              <h1>delete prject</h1>
+
+              <p>
+               برای حذف  کردن پروژه  به این روت درخواست بزن
+              </p>
+            </div>
+          </header>
+
+          <!-- API URL -->
+          <section class="api-section">
+            <h2 class="section-title">آدرس API</h2>
+
+            <div class="api-url-box">
+              <span class="method delete">delete</span>
+
+              <a
+                href="٫"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="api-link"
+              >
+                api/profile/project/:id
+              </a>
+            </div>
+          </section>
+
+          <!-- REQUEST BODY -->
+          <section class="api-section">
+            <div class="section-header">
+              <h2 class="section-title">بدنه درخواست (Request Body)</h2>
+
+              <span class="code-type">JSON</span>
+            </div>
+
+            <div class="code-container">
+              <pre><code class="language-json"></code></pre>
+            </div>
+          </section>
+
+          <!-- RESPONSE BODY -->
+          <section class="api-section">
+            <div class="section-header">
+              <h2 class="section-title">بدنه پاسخ (Response Body)</h2>
+
+              <span class="code-type success">200 OK</span>
+            </div>
+
+            <div class="code-container">
+              <pre><code class="language-json">{
+  "success": true,
+  "message": {
+    "message": "Project deleted successfully"
+  }
+}</code></pre>
+            </div>
+          </section>
+        </div>
+
       </main>
     </div>
 
