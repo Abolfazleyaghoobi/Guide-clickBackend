@@ -36,6 +36,12 @@
 
             <span class="menu-method post">POST</span>
           </a>
+            <a href="#logout" class="menu-item active">
+            <span class="menu-icon">＋</span>
+            خروج
+
+            <span class="menu-method post">POST</span>
+          </a>
           <a href="#profile" class="menu-item active">
             <span class="menu-icon">＋</span>
             پروفایل
@@ -90,6 +96,22 @@
             حذف  کردن پروژه
 
             <span class="menu-method delete">DELETE</span>
+          </a>
+               <a href="#sendCode" class="menu-item active">
+            <span class="menu-icon">＋</span>
+           send code
+
+            <span class="menu-method post">POST</span>
+          </a>
+              <a href="#showCode" class="menu-item active">
+            <span class="menu-icon">＋</span>
+          نمایش کد 
+            <span class="menu-method post">POST</span>
+          </a>
+                  <a href="#verifyCode" class="menu-item active">
+            <span class="menu-icon">＋</span>
+          تایید کد 
+            <span class="menu-method post">POST</span>
           </a>
         </nav>
       </aside>
@@ -252,6 +274,68 @@
       "banner_url": null
     }
   }
+}</code></pre>
+            </div>
+          </section>
+        </div>
+          <!-- logout -->
+        <div class="documentation-container" id="logout">
+          <!-- API HEADER -->
+          <header class="api-header">
+            <div class="api-title">
+              <span class="api-label"> AUTHENTICATION / LOGOUT </span>
+
+              <h1>خروج</h1>
+
+              <p>برای خروج از این روت درخواست بزن</p>
+            </div>
+          </header>
+
+          <!-- API URL -->
+          <section class="api-section">
+            <h2 class="section-title">آدرس API</h2>
+
+            <div class="api-url-box">
+              <span class="method post">POST</span>
+
+              <a
+                href="٫"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="api-link"
+              >
+                api/auth/logout
+              </a>
+            </div>
+          </section>
+
+          <!-- REQUEST BODY -->
+          <section class="api-section">
+            <div class="section-header">
+              <h2 class="section-title">بدنه درخواست (Request Body)</h2>
+
+              <span class="code-type">JSON</span>
+            </div>
+
+            <div class="code-container">
+              <pre><code class="language-json"></code></pre>
+            </div>
+          </section>
+
+          <!-- RESPONSE BODY -->
+          <section class="api-section">
+            <div class="section-header">
+              <h2 class="section-title">بدنه پاسخ (Response Body)</h2>
+
+              <span class="code-type success">200 OK</span>
+            </div>
+
+            <div class="code-container">
+              <pre><code class="language-json">{
+  "success": true,
+  "message": "User logged out successfully",
+  
+  
 }</code></pre>
             </div>
           </section>
@@ -553,20 +637,23 @@
               </a>
             </div>
           </section>
-
+          <p>بصورت پیش فرض کاربر نمیتونه شماره تماسش 
+                رو عوض کنه اما میتونه نام کاربری شو عوض کنه با همین روت ٬ 
+                زمانی کاربر میتونه شمارشو عوض کنه که کدی که از سمت ادمین میاد
+                 رو تایید کنه بعد اینکه تایید کرد 
+                 میتونه شمارش رو عوض کنه با همین روت </p>
           <!-- REQUEST BODY -->
           <section class="api-section">
             <div class="section-header">
               <h2 class="section-title">بدنه درخواست (Request Body)</h2>
-
+              
               <span class="code-type">JSON</span>
+              
             </div>
 
             <div class="code-container">
               <pre><code class="language-json">{
-ببین برای اپدیت قسمت پروفایل رو من این هارو من میپذیرم فرقی نمیکنه
- یا همش باشه یا یکی اما حد اقل یکی
- از این ها باید باشه بعد درخواست بزن 
+                
 
 "username":"alitest",
 "phone":"09123456789",
@@ -905,7 +992,6 @@
             </div>
           </section>
         </div>
-
                  <!-- delete project -->
         <div class="documentation-container" id="deleteProject">
           <!-- API HEADER -->
@@ -965,6 +1051,233 @@
   "success": true,
   "message": {
     "message": "Project deleted successfully"
+  }
+}</code></pre>
+            </div>
+          </section>
+        </div>
+
+            <!-- send code -->
+        <div class="documentation-container" id="sendCode">
+          <!-- API HEADER -->
+          <header class="api-header">
+            <div class="api-title">
+              <span class="api-label"> AUTHENTICATION / code </span>
+
+              <h1>send code</h1>
+
+              <p>
+                برای ارسال کد تایید به        این روت درخواست بزن
+              </p>
+            </div>
+          </header>
+
+          <!-- API URL -->
+          <section class="api-section">
+            <h2 class="section-title">آدرس API</h2>
+
+            <div class="api-url-box">
+              <span class="method post">post</span>
+
+              <a
+                href="٫"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="api-link"
+              >
+                api/profile/project/sendCodeForChange
+              </a>
+            </div>
+          </section>
+
+          <!-- REQUEST BODY -->
+          <section class="api-section">
+            <div class="section-header">
+              <h2 class="section-title">بدنه درخواست (Request Body)</h2>
+
+              <span class="code-type">JSON</span>
+            </div>
+
+            <div class="code-container">
+              <pre><code class="language-json">
+                هیچی نمیخواد بفرستی
+
+              </code></pre>
+            </div>
+          </section>
+
+          <!-- RESPONSE BODY -->
+          <section class="api-section">
+            <div class="section-header">
+              <h2 class="section-title">بدنه پاسخ (Response Body)</h2>
+
+              <span class="code-type success">200 OK</span>
+            </div>
+
+            <div class="code-container">
+              <pre><code class="language-json">{
+  "success": true,
+  "message": "Code sent successfully",
+  "data": {
+    "success": true,
+    "message": "Code sent successfully"
+  }
+}</code></pre>
+            </div>
+          </section>
+        </div>
+      <!-- show code -->
+        <div class="documentation-container" id="showCode">
+          <!-- API HEADER -->
+          <header class="api-header">
+            <div class="api-title">
+              <span class="api-label"> AUTHENTICATION / code </span>
+
+              <h1>send code</h1>
+
+              <p>
+              برای دیدن کد به این روت درخواست بزن 
+              </p>
+            </div>
+          </header>
+
+          <!-- API URL -->
+          <section class="api-section">
+            <h2 class="section-title">آدرس API</h2>
+
+            <div class="api-url-box">
+              <span class="method get">get</span>
+
+              <a
+                href="٫"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="api-link"
+              >
+                api/profile/project/showCodeForChange
+              </a>
+            </div>
+          </section>
+
+          <!-- REQUEST BODY -->
+          <section class="api-section">
+            <div class="section-header">
+              <h2 class="section-title">بدنه درخواست (Request Body)</h2>
+
+              <span class="code-type">JSON</span>
+            </div>
+
+            <div class="code-container">
+              <pre><code class="language-json">
+                هیچی نمیخواد بفرستی
+
+              </code></pre>
+            </div>
+          </section>
+
+          <!-- RESPONSE BODY -->
+          <section class="api-section">
+            <div class="section-header">
+              <h2 class="section-title">بدنه پاسخ (Response Body)</h2>
+
+              <span class="code-type success">200 OK</span>
+            </div>
+
+            <div class="code-container">
+              <pre><code class="language-json">{
+  "success": true,
+  "message": "Code retrieved successfully",
+  "data": {
+    "success": true,
+    "count": 1,
+    "codes": [
+      {
+        "id": 5,
+        "username": "ali324ee",
+        "phone": "09399698725",
+        "code": "222663",
+        "expires_at": "2026-11-13T18:55:58.000Z",
+        "attempts": 0,
+        "consumed_at": null,
+        "created_at": "2026-11-12T18:55:58.685Z"
+      }
+    ]
+  }
+}</code></pre>
+            </div>
+          </section>
+        </div>
+ <!-- verify code -->
+        <div class="documentation-container" id="verifyCode">
+          <!-- API HEADER -->
+          <header class="api-header">
+            <div class="api-title">
+              <span class="api-label"> AUTHENTICATION / code </span>
+
+              <h1>verify code</h1>
+
+              <p>
+              برای تأیید کد به این روت درخواست بزن 
+              </p>
+            </div>
+          </header>
+
+          <!-- API URL -->
+          <section class="api-section">
+            <h2 class="section-title">آدرس API</h2>
+
+            <div class="api-url-box">
+              <span class="method post">post</span>
+
+              <a
+                href="٫"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="api-link"
+              >
+                api/profile/project/verifyCodeForChange
+              </a>
+            </div>
+          </section>
+          <p>
+            بعد اینکه کد تایید شد کاربر متیونه شمار تماسش رو تغییر بده  
+           <a href="#updateAccount">
+             به همون روت قبلی 
+           </a>
+          </p>
+          <!-- REQUEST BODY -->
+          <section class="api-section">
+            <div class="section-header">
+              <h2 class="section-title">بدنه درخواست (Request Body)</h2>
+
+              <span class="code-type">JSON</span>
+            </div>
+
+            <div class="code-container">
+              <pre><code class="language-json">
+             {
+              "code": "YOUR_CODE"
+             }
+
+              </code></pre>
+            </div>
+          </section>
+
+          <!-- RESPONSE BODY -->
+          <section class="api-section">
+            <div class="section-header">
+              <h2 class="section-title">بدنه پاسخ (Response Body)</h2>
+
+              <span class="code-type success">200 OK</span>
+            </div>
+
+            <div class="code-container">
+              <pre><code class="language-json">{
+  "success": true,
+  "message": "Code verified successfully",
+  "data": {
+    "success": true,
+    "message": "Code verified successfully"
   }
 }</code></pre>
             </div>
