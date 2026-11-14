@@ -113,6 +113,33 @@
           تایید کد 
             <span class="menu-method post">POST</span>
           </a>
+
+                  <a href="#createCertificate" class="menu-item active">
+            <span class="menu-icon">＋</span>
+         ساخت گواهینامه 
+            <span class="menu-method post">POST</span>
+          </a>
+               <a href="#updateCertificate" class="menu-item active">
+            <span class="menu-icon">＋</span>
+         اپدیت  گواهینامه 
+            <span class="menu-method put">PATCH</span>
+          </a>
+               <a href="#deleteCertificate" class="menu-item active">
+            <span class="menu-icon">＋</span>
+         حذف گواهینامه 
+            <span class="menu-method delete">DELETE</span>
+          </a>
+               <a href="#assignCertificate" class="menu-item active">
+            <span class="menu-icon">＋</span>
+                دادن گواهینامه 
+            <span class="menu-method post">POST</span>
+          </a>
+           </a>
+               <a href="#showCertificate" class="menu-item active">
+            <span class="menu-icon">＋</span>
+                نمایش گواهینامه 
+            <span class="menu-method post">POST</span>
+          </a>
         </nav>
       </aside>
 
@@ -403,29 +430,42 @@
   "success": true,
   "message": "Get info user successfully",
   "data": {
-    "id": "22",
-    "username": "Aba12zle",
-    "phone": "09317891296",
+    "id": "44",
+    "username": "ali324ee",
+    "phone": "09399698725",
     "status": "active",
     "level": 1,
     "xp": 0,
     "xp_to_next_level": 1000,
     "step_balance": 0,
     "profile": {
-      "display_name": "Aba12zle",
+      "display_name": "alskdjf",
       "bio": null,
-      "avatar_url": null,
-      "banner_url": null,
       "github_url": null,
-                 "portolio_url": null,
+      "portolio_url": null,
+      "avatar_url": null,
+      "banner_url": null
     },
-     "AccountToken": {
-      "token_Raw": این قسمت زمانی که کاربر کوکی حامل 
-      توکن اهراز هویت داشته
-       باشه نمایش داده میشه,
-      "prefix": "tuv_76c4",
+    "AccountToken": {
+      "token_Raw": "tuv_ccf8ff2054c86147e22551e00327f2ce5c4c0c7889d3c199772a340213414fba",
+      "prefix": "tuv_ccf8",
       "label": "Account Token"
-    }
+    },
+    "projects": [],
+    "certificates": [
+      {
+        "userId": "44",
+        "source": "admin",
+        "certificateType": {
+          "id": "2",
+          "key": "ali",
+          "title": "ali1",
+          "iconKey": "ali3",
+          "color": "ali",
+          "isActive": true
+        }
+      }
+    ]
   }
 }</code></pre>
             </div>
@@ -495,22 +535,41 @@
   "success": true,
   "message": "Get info user successfully",
   "data": {
-    "id": "22",
-    "username": "Aba12zle",
-    "phone": "09317891296",
+    "id": "44",
+    "username": "ali324ee",
+    "phone": "09399698725",
     "status": "active",
     "level": 1,
     "xp": 0,
     "xp_to_next_level": 1000,
     "step_balance": 0,
     "profile": {
-      "display_name": "Aba12zle",
+      "display_name": "alskdjf",
       "bio": null,
-      "avatar_url": null,
       "github_url": null,
       "portolio_url": null,
+      "avatar_url": null,
       "banner_url": null
-    }
+    },
+    "AccountToken": {
+      "prefix": "tuv_ccf8",
+      "label": "Account Token"
+    },
+    "projects": [],
+    "certificates": [
+      {
+        "userId": "44",
+        "source": "admin",
+        "certificateType": {
+          "id": "2",
+          "key": "ali",
+          "title": "ali1",
+          "iconKey": "ali3",
+          "color": "ali",
+          "isActive": true
+        }
+      }
+    ]
   }
 }</code></pre>
             </div>
@@ -1284,6 +1343,398 @@
           </section>
         </div>
 
+        <!-- carete certificate -->
+        <div class="documentation-container" id="createCertificate">
+          <!-- API HEADER -->
+          <header class="api-header">
+            <div class="api-title">
+              <span class="api-label"> AUTHENTICATION / certificate </span>
+
+              <h1>carete certificate</h1>
+
+              <p>
+            حتما برای ساخت گواهی نامه باید نقش ادمین بوده باشد
+              </p>
+            </div>
+          </header>
+
+          <!-- API URL -->
+          <section class="api-section">
+            <h2 class="section-title">آدرس API</h2>
+
+            <div class="api-url-box">
+              <span class="method post">post</span>
+
+              <a
+                href="٫"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="api-link"
+              >
+                api/crttype/create
+              </a>
+            </div>
+          </section>
+        
+          <!-- REQUEST BODY -->
+          <section class="api-section">
+            <div class="section-header">
+              <h2 class="section-title">بدنه درخواست (Request Body)</h2>
+
+              <span class="code-type">JSON</span>
+            </div>
+
+            <div class="code-container">
+              <pre><code class="language-json">
+          {
+  "key": "frontend_developer",
+  "title": "توسعه‌دهنده فرانت‌اند",
+  "iconKey": "code",
+  "color": "#3B82F6",
+  "isActive": true
+}
+
+              </code></pre>
+            </div>
+          </section>
+
+          <!-- RESPONSE BODY -->
+          <section class="api-section">
+            <div class="section-header">
+              <h2 class="section-title">بدنه پاسخ (Response Body)</h2>
+
+              <span class="code-type success">201 OK</span>
+            </div>
+
+            <div class="code-container">
+              <pre><code class="language-json">{
+    "message": "Certificate Type Created Successfully",
+    "result": {
+        "id": "3",
+        "key": "frontend_developer",
+        "title": "توسعه‌دهنده فرانت‌اند",
+        "iconKey": "code",
+        "color": "#3B82F6",
+        "isActive": true
+    }
+}</code></pre>
+            </div>
+          </section>
+        </div>
+         <!-- update certificate -->
+        <div class="documentation-container" id="updateCertificate">
+          <!-- API HEADER -->
+          <header class="api-header">
+            <div class="api-title">
+              <span class="api-label"> AUTHENTICATION / certificate </span>
+
+              <h1>update certificate</h1>
+
+              <p>
+            حتما برای اپدیت  گواهی نامه باید نقش ادمین بوده باشد
+              </p>
+            </div>
+          </header>
+
+          <!-- API URL -->
+          <section class="api-section">
+            <h2 class="section-title">آدرس API</h2>
+
+            <div class="api-url-box">
+              <span class="method put">patch</span>
+
+              <a
+                href="٫"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="api-link"
+              >
+                api/crttype/update/:id
+              </a>
+            </div>
+          </section>
+        
+          <!-- REQUEST BODY -->
+          <section class="api-section">
+            <div class="section-header">
+              <h2 class="section-title">بدنه درخواست (Request Body)</h2>
+
+              <span class="code-type">JSON</span>
+            </div>
+
+            <div class="code-container">
+              <pre><code class="language-json">
+          {
+            حداقل یدونه فیلد باید باشه 
+            
+  "key": "frontend_developer",
+  "title": "توسعه‌دهنده فرانت‌اند",
+  "iconKey": "code",
+  "color": "#3B82F6",
+  "isActive": true
+}
+
+              </code></pre>
+            </div>
+          </section>
+
+          <!-- RESPONSE BODY -->
+          <section class="api-section">
+            <div class="section-header">
+              <h2 class="section-title">بدنه پاسخ (Response Body)</h2>
+
+              <span class="code-type success">201 OK</span>
+            </div>
+
+            <div class="code-container">
+              <pre><code class="language-json">{
+    "message": "Certificate Type update Successfully",
+    "result": {
+        "id": "3",
+        "key": "111",
+        "title": "توسعه‌دهنده فرانت‌اند",
+        "iconKey": "code",
+        "color": "#3B82F6",
+        "isActive": true
+    }
+}</code></pre>
+            </div>
+          </section>
+        </div>
+
+           <!-- delet certificate -->
+        <div class="documentation-container" id="deleteCertificate">
+          <!-- API HEADER -->
+          <header class="api-header">
+            <div class="api-title">
+              <span class="api-label"> AUTHENTICATION / certificate </span>
+
+              <h1>delete certificate</h1>
+
+              <p>
+          
+              </p>
+            </div>
+          </header>
+
+          <!-- API URL -->
+          <section class="api-section">
+            <h2 class="section-title">آدرس API</h2>
+
+            <div class="api-url-box">
+              <span class="method delete">delete</span>
+
+              <a
+                href="٫"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="api-link"
+              >
+        api/crttype/delete/:id
+              </a>
+            </div>
+          </section>
+        
+          <!-- REQUEST BODY -->
+          <section class="api-section">
+            <div class="section-header">
+              <h2 class="section-title">بدنه درخواست (Request Body)</h2>
+
+              <span class="code-type">JSON</span>
+            </div>
+
+            <div class="code-container">
+              <pre><code class="language-json">
+     
+
+              </code></pre>
+            </div>
+          </section>
+
+          <!-- RESPONSE BODY -->
+          <section class="api-section">
+            <div class="section-header">
+              <h2 class="section-title">بدنه پاسخ (Response Body)</h2>
+
+              <span class="code-type success">201 OK</span>
+            </div>
+
+            <div class="code-container">
+              <pre><code class="language-json">{
+    "message": "Certificate Type delete Successfully",
+    "result": {
+        "key": "111",
+        "title": "توسعه‌دهنده فرانت‌اند",
+        "iconKey": "code",
+        "color": "#3B82F6",
+        "isActive": true
+    }
+}</code></pre>
+            </div>
+          </section>
+        </div>
+
+           <!-- assign certificate -->
+        <div class="documentation-container" id="assignCertificate">
+          <!-- API HEADER -->
+          <header class="api-header">
+            <div class="api-title">
+              <span class="api-label"> AUTHENTICATION / certificate </span>
+
+              <h1>assign certigicate/h1>
+
+              <p>
+          دادن گواهی نامه به کاربر
+              </p>
+            </div>
+          </header>
+
+          <!-- API URL -->
+          <section class="api-section">
+            <h2 class="section-title">آدرس API</h2>
+
+            <div class="api-url-box">
+              <span class="method post">post</span>
+
+              <a
+                href="٫"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="api-link"
+              >
+        api/profile/assigncrt
+              </a>
+            </div>
+          </section>
+        <p>
+          در بدنه درخواست باید هم ایدی کاربر باشه هم ایدی گواهی نامه 
+        </p>
+          <!-- REQUEST BODY -->
+          <section class="api-section">
+            <div class="section-header">
+              <h2 class="section-title">بدنه درخواست (Request Body)</h2>
+
+              <span class="code-type">JSON</span>
+            </div>
+
+            <div class="code-container">
+              <pre><code class="language-json">
+     {
+"userId":"42",
+"certificateTypeId":"2"
+
+}
+
+              </code></pre>
+            </div>
+          </section>
+
+          <!-- RESPONSE BODY -->
+          <section class="api-section">
+            <div class="section-header">
+              <h2 class="section-title">بدنه پاسخ (Response Body)</h2>
+
+              <span class="code-type success">200 OK</span>
+            </div>
+
+            <div class="code-container">
+              <pre><code class="language-json">{
+    "success": true,
+    "message": "Certificate assigned successfully",
+    "data": {
+        "userId": "44",
+        "certificateTypeId": "4",
+        "awardedAt": "2026-11-14T14:03:58.330Z",
+        "source": "admin",
+        "sourceRefId": null
+    }
+}</code></pre>
+            </div>
+          </section>
+        </div>
+
+             <!-- show all certificate -->
+        <div class="documentation-container" id="showCertificate">
+          <!-- API HEADER -->
+          <header class="api-header">
+            <div class="api-title">
+              <span class="api-label"> AUTHENTICATION / certificate </span>
+
+              <h1>show all certificate</h1>
+
+              <p>
+          
+              </p>
+            </div>
+          </header>
+
+          <!-- API URL -->
+          <section class="api-section">
+            <h2 class="section-title">آدرس API</h2>
+
+            <div class="api-url-box">
+              <span class="method get">get</span>
+
+              <a
+                href="٫"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="api-link"
+              >
+        api/crttype/getAll
+              </a>
+            </div>
+          </section>
+        
+          <!-- REQUEST BODY -->
+          <section class="api-section">
+            <div class="section-header">
+              <h2 class="section-title">بدنه درخواست (Request Body)</h2>
+
+              <span class="code-type">JSON</span>
+            </div>
+
+            <div class="code-container">
+              <pre><code class="language-json">
+     
+
+              </code></pre>
+            </div>
+          </section>
+
+          <!-- RESPONSE BODY -->
+          <section class="api-section">
+            <div class="section-header">
+              <h2 class="section-title">بدنه پاسخ (Response Body)</h2>
+
+              <span class="code-type success">201 OK</span>
+            </div>
+
+            <div class="code-container">
+              <pre><code class="language-json">{{
+    "message": "All Certificate Type",
+    "result": [
+        {
+            "id": "2",
+            "key": "ali",
+            "title": "ali1",
+            "iconKey": "ali3",
+            "color": "ali",
+            "isActive": true
+        },
+        {
+            "id": "4",
+            "key": "frontend_developer",
+            "title": "توسعه‌دهنده فرانت‌اند",
+            "iconKey": "code",
+            "color": "#3B82F6",
+            "isActive": true
+        }
+    ]
+}</code></pre>
+            </div>
+          </section>
+        </div>
       </main>
     </div>
 
